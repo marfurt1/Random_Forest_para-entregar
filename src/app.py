@@ -43,29 +43,26 @@ loaded_model = pickle.load(open(filename, 'rb'))
 #Predict using the model
 Pclass = 3
 Sex = 1
-Age = 5.0
+Age = 70.0
 SibSp = 2
 Parch = 1
 Ticket = 2666
 Fare = 19.2583
-#Cabin = NaN
 Embarked = 2
 
 #predigo el target para los valores seteados con modelo
-print('Predicted Survived 1 : \n', loaded_model.predict([[Fare,Age,Sex]]))
+print('Predicted Survived 1 : \n', loaded_model.predict([[Pclass,Sex,Age,SibSp,Parch,Fare,Embarked,]]))
 
-Pclass = 3
+Pclass = 1
 Sex = 0
 Age = 28.0
 SibSp = 0
 Parch = 0
 Ticket = 349207
 Fare = 7.8958
-#Cabin = NaN
 Embarked = 0
 
 
 #predigo el target para los valores seteados con modelo
-print('Predicted Survived 2: \n', loaded_model.predict([[Fare,Age,Sex]]))
-
+print('Predicted Survived 2 : \n', loaded_model.predict([[Pclass,Sex,Age,SibSp,Parch,Fare,Embarked,]]))
 
